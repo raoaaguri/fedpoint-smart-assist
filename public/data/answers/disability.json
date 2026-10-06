@@ -1,0 +1,75 @@
+{
+  "id": "disability",
+  "title": "Disability income protection",
+  "topic": "Disability",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "FedPoint pays the full premium for both disability plans, and they work together: short-term covers the first weeks, long-term takes over after."
+    },
+    {
+      "type": "table",
+      "columns": [
+        {
+          "title": "Short-term (STD)"
+        },
+        {
+          "title": "Long-term (LTD)"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Pays",
+          "cells": [
+            "70% of weekly earnings",
+            "66⅔% of monthly earnings"
+          ]
+        },
+        {
+          "label": "Maximum",
+          "cells": [
+            "$2,000 a week",
+            "$10,000 a month"
+          ]
+        },
+        {
+          "label": "Starts",
+          "cells": [
+            "Day 8",
+            "After 90 days"
+          ]
+        },
+        {
+          "label": "Lasts",
+          "cells": [
+            "Up to 12 weeks",
+            "Age 65, Social Security retirement age, or 3.5 years, whichever is longest"
+          ]
+        },
+        {
+          "label": "Covers",
+          "cells": [
+            "Off-the-job injury or illness",
+            "On- and off-the-job"
+          ]
+        },
+        {
+          "label": "Cost to you",
+          "cells": [
+            "None",
+            "None"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "std",
+    "ltd"
+  ],
+  "followUps": [
+    "Who is eligible?",
+    "What reduces my benefit?"
+  ]
+}

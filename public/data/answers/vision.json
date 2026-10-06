@@ -1,0 +1,45 @@
+{
+  "id": "vision",
+  "title": "Vision plan coverage",
+  "topic": "Vision",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "The DeltaVision plan covers hardware only, so it helps with glasses and contacts but not with the exam itself."
+    },
+    {
+      "type": "facts",
+      "items": [
+        {
+          "label": "Frames",
+          "text": "$150 allowance every 12 months, then 20% off the balance."
+        },
+        {
+          "label": "Standard lenses",
+          "text": "$10 copay for single vision, bifocal or trifocal."
+        },
+        {
+          "label": "Contacts",
+          "text": "$150 allowance instead of glasses. Conventional contacts get 15% off the balance."
+        },
+        {
+          "label": "Laser vision correction",
+          "text": "15% off retail or 5% off promotional price."
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "icon": "info",
+      "text": "This plan doesn't list an eye exam benefit. Check with your medical plan or your provider."
+    }
+  ],
+  "sources": [
+    "dvision"
+  ],
+  "followUps": [
+    "Where can I buy glasses online?",
+    "Can I get both glasses and contacts?"
+  ]
+}

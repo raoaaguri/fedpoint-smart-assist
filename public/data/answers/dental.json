@@ -1,0 +1,52 @@
+{
+  "id": "dental",
+  "title": "Dental procedure costs",
+  "topic": "Dental cost",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Your Delta Dental plan pays 80% of basic work like root canals after a $50 deductible, and 50% of major work like crowns. Try your own dentist's quotes below."
+    },
+    {
+      "type": "calculator",
+      "title": "Estimate your share",
+      "hint": "Example fees. Replace with your quote.",
+      "deductible": 50,
+      "annualMax": 1500,
+      "fields": [
+        {
+          "key": "rootCanal",
+          "label": "Root canal fee",
+          "ariaLabel": "Root canal fee in dollars",
+          "defaultValue": 1000,
+          "coinsurance": 0.8,
+          "applyDeductible": true
+        },
+        {
+          "key": "crown",
+          "label": "Crown fee",
+          "ariaLabel": "Crown fee in dollars",
+          "defaultValue": 1400,
+          "coinsurance": 0.5,
+          "applyDeductible": false
+        }
+      ],
+      "planLabel": "Delta Dental pays",
+      "youLabel": "You pay",
+      "defaultNote": "Assumes a participating dentist, no other claims this year, and a $1,500 annual maximum.",
+      "maxNote": "The {max} annual maximum applies, so you cover the amount above it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Double-Up Max can raise the yearly limit up to $3,000 if you carry over unused benefits."
+    }
+  ],
+  "sources": [
+    "dental"
+  ],
+  "followUps": [
+    "What is Double-Up Max?",
+    "Does the plan cover braces?"
+  ]
+}

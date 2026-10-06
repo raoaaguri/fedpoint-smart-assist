@@ -1,0 +1,49 @@
+{
+  "id": "contacts",
+  "title": "Talking to a person",
+  "topic": "Talk to a person",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "For account-specific questions, these teams can see your details. Smart Assist can't."
+    },
+    {
+      "type": "people",
+      "items": [
+        {
+          "name": "Medical (Cigna)",
+          "description": "Claims, ID cards, providers",
+          "phone": "866-494-2111",
+          "tel": "8664942111"
+        },
+        {
+          "name": "Dental (Northeast Delta Dental)",
+          "description": "Benefits and claims",
+          "phone": "1-800-537-1715",
+          "tel": "8005371715"
+        },
+        {
+          "name": "Vision (EyeMed network)",
+          "description": "Find a provider",
+          "phone": "1-866-723-0513",
+          "tel": "8667230513"
+        },
+        {
+          "name": "FSA and HSA (HRC Total Solutions)",
+          "description": "Weekdays 8:30am to 5pm ET",
+          "phone": "603-647-1147",
+          "tel": "6036471147"
+        },
+        {
+          "name": "Legal plan (MetLife)",
+          "description": "Find an attorney",
+          "phone": "800-821-6400",
+          "tel": "8008216400"
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "followUps": []
+}

@@ -1,0 +1,17 @@
+{
+  "oap": "FedPoint 2026 OAP plan summary",
+  "hdhp": "FedPoint 2026 HDHP plan summary",
+  "oapsbc": "FedPoint 2026 OAP SBC",
+  "hdhpsbc": "FedPoint 2026 HDHP SBC",
+  "dental": "Delta Dental outline of coverage",
+  "dvision": "DeltaVision plan summary",
+  "std": "Short-term disability summary",
+  "ltd": "Long-term disability summary",
+  "life": "Voluntary life summary",
+  "add": "Voluntary AD&D summary",
+  "legal": "MetLife legal plans overview",
+  "fsa": "HRC FSA education sheet",
+  "hsa": "HRC HSA portal guide",
+  "fin": "Financial and estate planning benefit",
+  "cigna": "Cigna special enrollment notice"
+}

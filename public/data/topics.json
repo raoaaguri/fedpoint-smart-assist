@@ -1,0 +1,22 @@
+{
+  "topics": [
+    { "key": "medical", "title": "Medical", "description": "Compare the two medical plans", "question": "Compare the two medical plans", "image": "/assets/suggestions/medical.webp" },
+    { "key": "dental", "title": "Dental", "description": "What a procedure could cost you", "question": "What will a root canal and crown cost me?", "image": "/assets/suggestions/dental.webp" },
+    { "key": "vision", "title": "Vision", "description": "Frames, lenses and contacts", "question": "How does the vision plan work?", "image": "/assets/suggestions/vision.webp" },
+    { "key": "disability", "title": "Disability", "description": "Short- and long-term income protection", "question": "How do short-term and long-term disability differ?", "image": "/assets/suggestions/disability.webp" },
+    { "key": "life", "title": "Life and AD&D", "description": "How much coverage you can choose", "question": "How much life insurance can I get?", "image": "/assets/suggestions/life.webp" },
+    { "key": "legal", "title": "Legal plan", "description": "High and Standard options", "question": "What does the legal plan cover?", "image": "/assets/suggestions/legal.webp" },
+    { "key": "accounts", "title": "FSA, HSA and HRA", "description": "Spending accounts and claims", "question": "How do the FSA and HSA work?", "image": "/assets/suggestions/accounts.webp" },
+    { "key": "financial", "title": "Financial planning", "description": "Up to $400 a year reimbursed", "question": "What is the financial planning reimbursement?", "image": "/assets/suggestions/financial.webp" }
+  ],
+  "suggestionPages": [
+    ["medical", "dental", "vision", "accounts"],
+    ["disability", "life", "legal", "financial"]
+  ],
+  "quickQuestions": [
+    "I just had a baby. What do I need to do?",
+    "What is the difference between an HRA and an HSA?",
+    "Does the vision plan cover eye exams?",
+    "How do I file an FSA claim?"
+  ]
+}

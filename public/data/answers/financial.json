@@ -1,0 +1,39 @@
+{
+  "id": "financial",
+  "title": "Financial planning benefit",
+  "topic": "Financial planning",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "FedPoint reimburses up to **$400 a year** for a financial plan, a will or a trust."
+    },
+    {
+      "type": "facts",
+      "items": [
+        {
+          "label": "Financial plan",
+          "text": "must come from a Certified Financial Planner (CFP) or Chartered Financial Consultant (ChFC)."
+        },
+        {
+          "label": "Will or trust",
+          "text": "must be drafted by an estate planning attorney."
+        },
+        {
+          "label": "To claim",
+          "text": "submit the reimbursement form with a paid receipt in your name."
+        },
+        {
+          "label": "Tax",
+          "text": "the reimbursement is taxable and appears on your W-2."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "fin"
+  ],
+  "followUps": [
+    "What expenses are not eligible?"
+  ]
+}

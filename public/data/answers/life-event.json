@@ -1,0 +1,42 @@
+{
+  "id": "life-event",
+  "title": "Life event enrollment",
+  "topic": "Life event",
+  "showHouseholdNote": true,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A new baby, marriage or adoption lets you change your coverage outside the usual enrollment window, but the clock is short."
+    },
+    {
+      "type": "facts",
+      "items": [
+        {
+          "label": "30 days",
+          "text": "from the marriage, birth or adoption to request medical enrollment for yourself and your dependents."
+        },
+        {
+          "label": "30 days",
+          "text": "after other coverage ends if you or a dependent lose it."
+        },
+        {
+          "label": "60 days",
+          "text": "if state Medicaid or CHIP coverage ends, or you become eligible for premium assistance."
+        }
+      ],
+      "labelSuffix": ""
+    },
+    {
+      "type": "note",
+      "icon": "calendar",
+      "text": "Contact Cigna at 866-494-2111 to request special enrollment. Dental, vision, life and AD&D rules may differ, so confirm with HR."
+    }
+  ],
+  "sources": [
+    "cigna"
+  ],
+  "followUps": [
+    "Compare the two medical plans",
+    "How much life insurance can I get?"
+  ]
+}

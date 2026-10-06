@@ -1,0 +1,21 @@
+{
+  "id": "privacy",
+  "title": "Privacy reminder",
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "That looks like a personal number. Please don't share Social Security numbers, account numbers or medical details here."
+    },
+    {
+      "type": "paragraph",
+      "text": "I can answer general questions about your plans without them."
+    }
+  ],
+  "sources": [],
+  "followUps": [
+    "Compare the two medical plans",
+    "What will a root canal and crown cost me?"
+  ]
+}

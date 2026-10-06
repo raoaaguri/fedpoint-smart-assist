@@ -1,0 +1,52 @@
+{
+  "id": "legal",
+  "title": "Legal plan options",
+  "topic": "Legal plan",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "MetLife Legal Plans is paid through payroll, with no deductibles, copays or claim forms when you use a network attorney."
+    },
+    {
+      "type": "table",
+      "columns": [
+        {
+          "title": "High plan (Plus Parents)"
+        },
+        {
+          "title": "Standard plan"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Cost",
+          "cells": [
+            "$20 a month",
+            "$12 a month"
+          ]
+        },
+        {
+          "label": "Covers",
+          "cells": [
+            "You, spouse, dependents, parents, in-laws and grandparents",
+            "You, spouse and dependents"
+          ]
+        },
+        {
+          "label": "Examples",
+          "cells": [
+            "Wills and trusts, home sale or purchase, tax audits, elder-care documents",
+            "Simple wills, debt and identity theft defense, tenant matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "legal"
+  ],
+  "followUps": [
+    "Can I use my own attorney?"
+  ]
+}

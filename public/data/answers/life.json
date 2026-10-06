@@ -1,0 +1,45 @@
+{
+  "id": "life",
+  "title": "Life and AD&D coverage",
+  "topic": "Life and AD&D",
+  "showHouseholdNote": true,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Voluntary life and AD&D are both paid by you, and you choose the amount within these limits."
+    },
+    {
+      "type": "facts",
+      "items": [
+        {
+          "label": "Life for you",
+          "text": "$10,000 up to $500,000 (no more than 5 times salary), in $10,000 steps."
+        },
+        {
+          "label": "No health questions",
+          "text": "new hires can get up to $250,000 without a health application."
+        },
+        {
+          "label": "Spouse and children",
+          "text": "optional. Spouse up to $250,000, children up to $10,000. You must elect coverage for yourself first."
+        },
+        {
+          "label": "AD&D",
+          "text": "$10,000 to $500,000 for accidental death or dismemberment, on or off the job."
+        },
+        {
+          "label": "If you leave",
+          "text": "you can keep the coverage through portability or convert it to an individual policy."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "life",
+    "add"
+  ],
+  "followUps": [
+    "What is portability?",
+    "Are the eligibility hours the same?"
+  ]
+}

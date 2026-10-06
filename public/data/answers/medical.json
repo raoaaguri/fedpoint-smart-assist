@@ -1,0 +1,98 @@
+{
+  "id": "medical",
+  "title": "Medical plan comparison",
+  "topic": "Medical",
+  "showHouseholdNote": true,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "FedPoint offers two Cigna Open Access Plus In-Network medical plans. Here is how they compare on the numbers that matter most."
+    },
+    {
+      "type": "table",
+      "columns": [
+        {
+          "title": "HRA OAP",
+          "subtitle": "Lower deductible, employer-funded account"
+        },
+        {
+          "title": "HDHPQ",
+          "subtitle": "Higher deductible, plan pays 100% after"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Deductible",
+          "cells": [
+            "$4,000 person\n$12,000 family",
+            "$6,000 person\n$12,000 family"
+          ]
+        },
+        {
+          "label": "Out-of-pocket maximum",
+          "cells": [
+            "$8,000 person\n$16,000 family",
+            "$6,000 person\n$12,000 family"
+          ]
+        },
+        {
+          "label": "After the deductible",
+          "cells": [
+            "Plan pays 90%",
+            "Plan pays 100%"
+          ]
+        },
+        {
+          "label": "Employer HRA",
+          "cells": [
+            {
+              "type": "byTier",
+              "values": {
+                "Employee": "$2,000",
+                "Employee + 1": "$4,000",
+                "Family": "$6,000"
+              },
+              "suffix": "(up to $2,000 / $4,000 / $6,000 by tier)",
+              "fallback": "Up to $2,000 (you), $4,000 (you + 1), $6,000 (family)"
+            },
+            "Not in the plan summary"
+          ]
+        },
+        {
+          "label": "Preventive care",
+          "cells": [
+            "No charge",
+            "No charge"
+          ]
+        },
+        {
+          "label": "Monthly premium",
+          "cells": [
+            {
+              "text": "Coming soon",
+              "style": "soon"
+            },
+            {
+              "text": "Coming soon",
+              "style": "soon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The HRA plan starts paying sooner and adds employer dollars. The HDHPQ has a lower out-of-pocket ceiling. Premiums will complete the picture once they're available."
+    }
+  ],
+  "sources": [
+    "oap",
+    "hdhp",
+    "oapsbc",
+    "hdhpsbc"
+  ],
+  "followUps": [
+    "How does the HRA work?",
+    "What if I use an out-of-network doctor?"
+  ]
+}

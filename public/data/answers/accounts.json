@@ -1,0 +1,43 @@
+{
+  "id": "accounts",
+  "title": "FSA, HSA and HRA accounts",
+  "topic": "FSA, HSA and HRA",
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "These accounts all use pre-tax dollars for health costs, and HRC Total Solutions administers them."
+    },
+    {
+      "type": "facts",
+      "items": [
+        {
+          "label": "Healthcare FSA",
+          "text": "you choose an amount up front, the full amount is available on day one, and you pay with a VISA debit card or submit an itemized receipt."
+        },
+        {
+          "label": "HSA",
+          "text": "managed through the HRC portal, with an option to sweep balances into investments at $2,000 or more."
+        },
+        {
+          "label": "HRA",
+          "text": "employer-funded with the HRA OAP medical plan. It pays covered costs after you meet part of the deductible, and copays aren't reimbursed."
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "icon": "info",
+      "text": "Credit card statements aren't accepted as receipts. Keep an itemized receipt with the date, item, provider and amount."
+    }
+  ],
+  "sources": [
+    "fsa",
+    "hsa",
+    "oap"
+  ],
+  "followUps": [
+    "How do I file an FSA claim?",
+    "Is this item FSA eligible?"
+  ]
+}

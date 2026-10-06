@@ -1,0 +1,18 @@
+{
+  "id": "off-topic",
+  "title": null,
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "I can only help with your FedPoint benefits. Pick a topic below, or ask about a specific plan."
+    }
+  ],
+  "sources": [],
+  "followUps": [
+    "Compare the two medical plans",
+    "How does the vision plan work?",
+    "How do the FSA and HSA work?"
+  ]
+}
