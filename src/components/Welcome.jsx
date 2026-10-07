@@ -13,7 +13,7 @@ function greeting() {
 function SuggestionCard({ topic, index, onAsk }) {
   return (
     <button
-      className="group relative flex min-h-[78px] font-din items-start gap-3 overflow-hidden rounded-xl border border-line bg-white py-3.5 pr-3.5 pl-[13px] text-left shadow-[0_1px_2px_rgba(0,16,41,0.04)] transition-[translate,scale,box-shadow,border-color] duration-350 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-0.5 hover:border-blue-light hover:shadow-[0_12px_28px_-14px_rgba(0,48,143,0.28),0_2px_6px_rgba(0,16,41,0.05)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in @max-[860px]:flex-col @max-[860px]:gap-2.5 phone:min-h-0 phone:gap-2.5 phone:px-[11px] phone:py-3"
+      className="group relative flex min-h-[78px] font-din items-start gap-3 overflow-hidden rounded-xl border border-line bg-white py-3.5 pr-3.5 pl-[13px] text-left shadow-[0_1px_2px_rgba(0,16,41,0.04)] transition-[translate,scale,box-shadow,border-color] duration-350 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-0.5 hover:border-blue-light hover:shadow-[0_12px_28px_-14px_rgba(0,48,143,0.28),0_2px_6px_rgba(0,16,41,0.05)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in @max-[860px]:flex-col @max-[860px]:gap-2.5 short:min-h-[72px] short:py-3 phone:min-h-0 phone:gap-2.5 phone:px-[11px] phone:py-3"
       style={{ animationDelay: `${0.4 + index * 0.07}s` }}
       aria-label={topic.description ? `${topic.title}: ${topic.description}` : topic.title}
       onClick={() => onAsk(topic.question)}
@@ -26,7 +26,7 @@ function SuggestionCard({ topic, index, onAsk }) {
           {topic.title}
         </span>
         {topic.description && (
-          <span className="mt-[3px] line-clamp-2 text-[13.5px] leading-[1.35] text-ink-500 @max-[860px]:line-clamp-3 phone:text-[12.5px] tiny:w-[70%]">
+          <span className="mt-[3px] line-clamp-2 narrow:hidden text-[13.5px] leading-[1.35] text-ink-500 @max-[860px]:line-clamp-3 phone:text-[12.5px] tiny:w-[70%]">
             {topic.description}
           </span>
         )}
@@ -44,7 +44,7 @@ function Suggestions({ topicsState, onAsk }) {
   const cards = data ? data.suggestions.map((k) => data.topics.find((t) => t.key === k)).filter(Boolean) : [];
 
   return (
-    <div className="@container mt-10 phone:mt-[26px]">
+    <div className="@container mt-10 phone:mt-[26px] short:mt-5">
       <div className="mb-[10.5px] animate-rise" style={{ animationDelay: '0.34s' }}>
         <span className="font-din text-xs leading-[16.5px] font-bold tracking-[0.1em] text-ink-400 uppercase">Suggestions</span>
       </div>
@@ -70,7 +70,7 @@ export default function Welcome({ topicsState, compact, composer, onAsk }) {
   const quick = topicsState.data?.quickQuestions ?? [];
 
   return (
-    <section className="absolute inset-0 overflow-x-hidden overflow-y-auto [--hero-h:470px] phone:[--hero-h:600px]">
+    <section className="absolute inset-0 overflow-x-hidden overflow-y-auto phone:no-scrollbar [--hero-h:470px] phone:[--hero-h:600px]">
       {/* FedPoint hero: blue gradient, light bands, and the photo with its wave + aqua swoosh */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-(--hero-h) animate-hero-in overflow-hidden bg-[linear-gradient(180deg,var(--color-blue-dark)_10%,var(--color-blue)_75%,rgba(252,252,252,0)_99%)]"
@@ -84,30 +84,30 @@ export default function Welcome({ topicsState, compact, composer, onAsk }) {
         />
       </div>
 
-      <div className="relative z-[1] mx-auto box-content max-w-[912px] px-8 pt-[clamp(52px,9vh,88px)] pb-12 narrow:pt-[90px] phone:px-4 phone:pt-[calc(214px+env(safe-area-inset-top))] phone:pb-[calc(28px+env(safe-area-inset-bottom))]">
-        <div className="grid size-[54px] animate-pop-in place-items-center rounded-full bg-white shadow-[0_10px_28px_-10px_rgba(0,16,41,0.6),0_0_0_5px_rgba(148,242,242,0.22)] phone:size-12">
+      <div className="relative z-[1] mx-auto box-content max-w-[912px] px-8 pt-[clamp(52px,9vh,88px)] pb-12 narrow:pt-[90px] short:pt-5 short:pb-3 phone:px-4 phone:pt-[calc(214px+env(safe-area-inset-top))] phone:pb-[calc(28px+env(safe-area-inset-bottom))]">
+        <div className="grid size-[54px] animate-pop-in place-items-center rounded-full bg-white shadow-[0_10px_28px_-10px_rgba(0,16,41,0.6),0_0_0_5px_rgba(148,242,242,0.22)] phone:size-12 short:size-11">
           <BloubFace size={38} mood="suspicious" />
         </div>
-        <p className="mt-5 text-sm leading-none font-bold tracking-[0.16em] text-aqua-light uppercase phone:mt-4 phone:text-[12.5px] animate-rise" style={{ animationDelay: '0.12s' }}>
+        <p className="mt-5 text-sm leading-none font-bold tracking-[0.16em] text-aqua-light uppercase phone:mt-4 phone:text-[12.5px] short:mt-3 animate-rise" style={{ animationDelay: '0.12s' }}>
           {hello}
         </p>
         <h1
-          className={`mt-3 max-w-[520px] text-[clamp(30px,3vw,44px)] leading-[1.08] font-bold tracking-[-0.01em] text-white [text-shadow:0_2px_20px_rgba(0,16,41,0.25)] phone:mt-2.5 phone:text-[29px] tiny:text-[20px] tiny:leading-[26px] animate-rise ${compact ? 'mid:max-w-[440px] mid:text-[clamp(28px,2.6vw,38px)]' : ''}`}
+          className={`mt-3 max-w-[520px] text-[clamp(30px,3vw,44px)] leading-[1.08] font-bold tracking-[-0.01em] text-white [text-shadow:0_2px_20px_rgba(0,16,41,0.25)] phone:mt-2.5 phone:text-[29px] tiny:text-[20px] tiny:leading-[26px] short:mt-2 short:text-[clamp(28px,2.6vw,36px)] animate-rise ${compact ? 'mid:max-w-[440px] mid:text-[clamp(28px,2.6vw,38px)]' : ''}`}
           style={{ animationDelay: '0.18s' }}
         >
           How can I help with your FedPoint benefits?
         </h1>
-        <p className="mt-3.5 max-w-[470px] text-[clamp(16px,1.3vw,19px)] leading-[1.45] text-white/90 phone:mt-2.5 phone:text-[15.5px] animate-rise" style={{ animationDelay: '0.26s' }}>
+        <p className="mt-3.5 max-w-[470px] text-[clamp(16px,1.3vw,19px)] leading-[1.45] text-white/90 phone:mt-2.5 phone:text-[15.5px] short:mt-2 short:max-w-[600px] animate-rise" style={{ animationDelay: '0.26s' }}>
           Answers come from your 2026 plan documents. No sign-in needed.
         </p>
 
-        <div className="mt-[30px] phone:mt-[22px]">{composer}</div>
+        <div className="mt-[30px] phone:mt-[22px] short:mt-5">{composer}</div>
 
         <Suggestions topicsState={topicsState} onAsk={onAsk} />
 
         {quick.length > 0 && (
           <div
-            className="no-scrollbar mt-[18px] flex flex-wrap items-center gap-2 phone:fade-right phone:-mx-4 phone:mt-4 phone:flex-nowrap phone:overflow-x-auto phone:px-4 phone:pb-1 animate-rise"
+            className="no-scrollbar mt-[18px] short:mt-2.5 flex flex-wrap items-center gap-2 phone:fade-right phone:-mx-4 phone:mt-4 phone:flex-nowrap phone:overflow-x-auto phone:px-4 phone:pb-1 animate-rise"
             style={{ animationDelay: '0.6s' }}
           >
             <span className="mr-1 text-xs leading-[16.5px] font-bold tracking-[0.1em] text-ink-400 uppercase phone:flex-none">Popular</span>

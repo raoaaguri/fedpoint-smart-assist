@@ -30,7 +30,7 @@ export default function Composer({ variant, value, onChange, onSubmit, busy, aut
       <div
         className={`flex flex-1 cursor-text justify-between rounded-[14px] border bg-white shadow-comp transition-[border-color,box-shadow] duration-300 focus-within:border-blue-light focus-within:shadow-[0_0_0_4px_rgba(148,242,242,0.3),var(--shadow-comp)] ${
           hero
-            ? 'min-h-[168px] flex-col border-white/70 p-5 phone:min-h-[116px] phone:pt-3.5 phone:pr-3.5 phone:pb-3 phone:pl-4'
+            ? 'min-h-[168px] flex-col border-white/70 p-5 short:min-h-[120px] short:p-4 phone:min-h-[116px] phone:pt-3.5 phone:pr-3.5 phone:pb-3 phone:pl-4'
             : 'min-h-[58px] flex-row items-end gap-2.5 border-line py-3 pr-3 pl-5 phone:min-h-[54px] phone:py-2.5 phone:pr-2.5 phone:pl-4'
         }`}
         onClick={(e) => {
@@ -52,7 +52,7 @@ export default function Composer({ variant, value, onChange, onSubmit, busy, aut
             }
           }}
           className={`m-0 block w-full resize-none border-0 bg-transparent p-0 text-[15.5px] leading-[25.19px] tracking-[-0.27px] text-blue-vivid caret-blue outline-0 placeholder:text-ink-400 phone:text-base ${
-            hero ? 'min-h-[50px] phone:min-h-[46px]' : 'mb-1 min-h-[25px] flex-1 text-[15px]'
+            hero ? 'min-h-[50px] short:min-h-[40px] phone:min-h-[46px]' : 'mb-1 min-h-[25px] flex-1 text-[15px]'
           }`}
         />
         <div className={`flex items-center justify-end gap-2 ${hero ? 'pt-3' : ''}`}>

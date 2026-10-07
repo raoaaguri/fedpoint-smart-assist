@@ -196,7 +196,7 @@ export default function ChatView({ session, busy, documents, showTools, composer
         onTouchMove={release}
         onKeyDown={(e) => ['ArrowUp', 'PageUp', 'Home'].includes(e.key) && release()}
         tabIndex={-1}
-        className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto outline-none"
+        className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto outline-none phone:no-scrollbar"
       >
         <div className="mx-auto box-content max-w-[760px] px-7 pt-[22px] pb-9 narrow:px-5 narrow:pt-[18px] narrow:pb-7 phone:px-3.5 phone:pt-4 phone:pb-6" aria-live="polite">
           {session && (
