@@ -70,7 +70,7 @@ export default function Welcome({ topicsState, compact, composer, onAsk }) {
   const quick = topicsState.data?.quickQuestions ?? [];
 
   return (
-    <section className="absolute inset-0 overflow-x-hidden overflow-y-auto phone:no-scrollbar [--hero-h:470px] phone:[--hero-h:600px]">
+    <section className="absolute inset-0 overflow-x-hidden overflow-y-auto phone:no-scrollbar [--hero-h:470px] short:[--hero-h:330px] phone:[--hero-h:600px]">
       {/* FedPoint hero: blue gradient, light bands, and the photo with its wave + aqua swoosh */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-(--hero-h) animate-hero-in overflow-hidden bg-[linear-gradient(180deg,var(--color-blue-dark)_10%,var(--color-blue)_75%,rgba(252,252,252,0)_99%)]"
@@ -85,18 +85,23 @@ export default function Welcome({ topicsState, compact, composer, onAsk }) {
       </div>
 
       <div className="relative z-[1] mx-auto box-content max-w-[912px] px-8 pt-[clamp(52px,9vh,88px)] pb-12 narrow:pt-[90px] short:pt-5 short:pb-3 phone:px-4 phone:pt-[calc(214px+env(safe-area-inset-top))] phone:pb-[calc(28px+env(safe-area-inset-bottom))]">
-        <div className="grid size-[54px] animate-pop-in place-items-center rounded-full bg-white shadow-[0_10px_28px_-10px_rgba(0,16,41,0.6),0_0_0_5px_rgba(148,242,242,0.22)] phone:size-12 short:size-11">
-          <BloubFace size={38} mood="suspicious" />
+        {/* Short and small screens: no greeting line, and the heading sits beside the icon */}
+        <div className="narrow:flex narrow:items-center narrow:gap-3.5 short:flex short:items-center short:gap-4">
+          <div className="grid size-[54px] flex-none animate-pop-in place-items-center rounded-full bg-white shadow-[0_10px_28px_-10px_rgba(0,16,41,0.6),0_0_0_5px_rgba(148,242,242,0.22)] phone:size-12 short:size-11">
+            <BloubFace size={38} mood="suspicious" />
+          </div>
+          <div className="min-w-0">
+            <p className="mt-5 text-sm leading-none font-bold tracking-[0.16em] text-aqua-light uppercase phone:mt-4 phone:text-[12.5px] short:mt-3 animate-rise narrow:hidden short:hidden" style={{ animationDelay: '0.12s' }}>
+              {hello}
+            </p>
+            <h1
+              className={`mt-3 max-w-[520px] text-[clamp(30px,3vw,44px)] leading-[1.08] font-bold tracking-[-0.01em] text-white [text-shadow:0_2px_20px_rgba(0,16,41,0.25)] phone:mt-2.5 phone:text-[29px] tiny:text-[20px] tiny:leading-[26px] short:text-[clamp(28px,2.6vw,36px)] narrow:mt-0! short:mt-0! animate-rise ${compact ? 'mid:max-w-[440px] mid:text-[clamp(28px,2.6vw,38px)]' : ''}`}
+              style={{ animationDelay: '0.18s' }}
+            >
+              How can I help with your FedPoint benefits?
+            </h1>
+          </div>
         </div>
-        <p className="mt-5 text-sm leading-none font-bold tracking-[0.16em] text-aqua-light uppercase phone:mt-4 phone:text-[12.5px] short:mt-3 animate-rise" style={{ animationDelay: '0.12s' }}>
-          {hello}
-        </p>
-        <h1
-          className={`mt-3 max-w-[520px] text-[clamp(30px,3vw,44px)] leading-[1.08] font-bold tracking-[-0.01em] text-white [text-shadow:0_2px_20px_rgba(0,16,41,0.25)] phone:mt-2.5 phone:text-[29px] tiny:text-[20px] tiny:leading-[26px] short:mt-2 short:text-[clamp(28px,2.6vw,36px)] animate-rise ${compact ? 'mid:max-w-[440px] mid:text-[clamp(28px,2.6vw,38px)]' : ''}`}
-          style={{ animationDelay: '0.18s' }}
-        >
-          How can I help with your FedPoint benefits?
-        </h1>
         <p className="mt-3.5 max-w-[470px] text-[clamp(16px,1.3vw,19px)] leading-[1.45] text-white/90 phone:mt-2.5 phone:text-[15.5px] short:mt-2 short:max-w-[600px] animate-rise" style={{ animationDelay: '0.26s' }}>
           Answers come from your 2026 plan documents. No sign-in needed.
         </p>
