@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+/* Font: D-DIN PRO, a free DIN face close to fedpointusa.com's DIN 2014 */
+@font-face { font-family: 'D-DIN-PRO'; src: url(/assets/fonts/D-DIN-PRO-400-Regular.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; size-adjust: 106%; }
+@font-face { font-family: 'D-DIN-PRO'; src: url(/assets/fonts/D-DIN-PRO-500-Medium.woff2) format('woff2'); font-weight: 500; font-style: normal; font-display: swap; size-adjust: 106%; }
+@font-face { font-family: 'D-DIN-PRO'; src: url(/assets/fonts/D-DIN-PRO-600-SemiBold.woff2) format('woff2'); font-weight: 600; font-style: normal; font-display: swap; size-adjust: 106%; }
+@font-face { font-family: 'D-DIN-PRO'; src: url(/assets/fonts/D-DIN-PRO-700-Bold.woff2) format('woff2'); font-weight: 700; font-style: normal; font-display: swap; size-adjust: 106%; }
+
 /* FedPoint theme (from fedpoint-main-html, fedpointusa.com tokens) */
 @theme {
   --font-sans: Barlow, 'DIN 2014', 'D-DIN', -apple-system, 'Segoe UI', system-ui, sans-serif;
+  --font-din: 'D-DIN-PRO', 'DIN 2014', 'Bahnschrift', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
   --color-canvas: #fcfcfc;
   --color-ink-900: #001029;

@@ -1,22 +1,118 @@
 {
   "topics": [
-    { "key": "medical", "title": "Medical", "description": "Compare the two medical plans", "question": "Compare the two medical plans", "image": "/assets/suggestions/medical.webp" },
-    { "key": "dental", "title": "Dental", "description": "What a procedure could cost you", "question": "What will a root canal and crown cost me?", "image": "/assets/suggestions/dental.webp" },
-    { "key": "vision", "title": "Vision", "description": "Frames, lenses and contacts", "question": "How does the vision plan work?", "image": "/assets/suggestions/vision.webp" },
-    { "key": "disability", "title": "Disability", "description": "Short- and long-term income protection", "question": "How do short-term and long-term disability differ?", "image": "/assets/suggestions/disability.webp" },
-    { "key": "life", "title": "Life and AD&D", "description": "How much coverage you can choose", "question": "How much life insurance can I get?", "image": "/assets/suggestions/life.webp" },
-    { "key": "legal", "title": "Legal plan", "description": "High and Standard options", "question": "What does the legal plan cover?", "image": "/assets/suggestions/legal.webp" },
-    { "key": "accounts", "title": "FSA, HSA and HRA", "description": "Spending accounts and claims", "question": "How do the FSA and HSA work?", "image": "/assets/suggestions/accounts.webp" },
-    { "key": "financial", "title": "Financial planning", "description": "Up to $400 a year reimbursed", "question": "What is the financial planning reimbursement?", "image": "/assets/suggestions/financial.webp" }
+    {
+      "key": "life-change",
+      "title": "Something changed in my life",
+      "description": "",
+      "question": "Something changed in my life",
+      "icon": "calendar",
+      "label": "Something changed in my life",
+      "prompt": "The employee has had a life change. Ask which one (new baby or adoption, marriage, divorce, new dependent, losing coverage elsewhere, turning 65, retiring) before explaining what they can update and by when.",
+      "notes": "Routes into the life-event set below"
+    },
+    {
+      "key": "choose-medical",
+      "title": "Help me choose a medical plan",
+      "description": "",
+      "question": "Help me choose a medical plan",
+      "icon": "heartPulse",
+      "label": "Help me choose a medical plan",
+      "prompt": "Help the employee compare our medical plans. First ask about coverage tier (just me, me + spouse, me + children, family) and expected care this year (mostly preventive, some visits, ongoing condition or planned procedure). Then compare premiums, deductibles and out-of-pocket maximums for that situation.",
+      "notes": "Need to update with new year’s plan data once we get it"
+    },
+    {
+      "key": "fsa-hsa",
+      "title": "Explain my FSA or HSA",
+      "description": "",
+      "question": "Explain my FSA or HSA",
+      "icon": "wallet",
+      "label": "Explain my FSA or HSA",
+      "prompt": "Explain the health spending accounts we offer, how each works, and which one fits the employee's medical plan. Ask which plan they are on if it matters.",
+      "notes": "[CONFIRM] account types"
+    },
+    {
+      "key": "dental-vision",
+      "title": "What's covered for dental and vision?",
+      "description": "",
+      "question": "What's covered for dental and vision?",
+      "icon": "tooth",
+      "label": "What's covered for dental and vision?",
+      "prompt": "Summarize our dental and vision plan coverage, including preventive care, common procedures, and frequency limits.",
+      "notes": ""
+    },
+    {
+      "key": "talk-person",
+      "title": "Talk to a benefits person",
+      "description": "",
+      "question": "Talk to a benefits person",
+      "icon": "phone",
+      "label": "Talk to a benefits person",
+      "prompt": "Give the employee the contact options for the benefits team and what to have ready when they call.",
+      "notes": "I believe we will have HR on hand to help (not chat) and perhaps benefits advisors too -  I need to get you this info"
+    },
+    { "key": "medical", "title": "Medical", "description": "Compare the two medical plans", "question": "Compare the two medical plans", "icon": "heartPulse" },
+    { "key": "dental", "title": "Dental", "description": "What a procedure could cost you", "question": "What will a root canal and crown cost me?", "icon": "tooth" },
+    { "key": "vision", "title": "Vision", "description": "Frames, lenses and contacts", "question": "How does the vision plan work?", "icon": "eye" },
+    { "key": "disability", "title": "Disability", "description": "Short- and long-term income protection", "question": "How do short-term and long-term disability differ?", "icon": "shieldCheck" },
+    { "key": "life", "title": "Life and AD&D", "description": "How much coverage you can choose", "question": "How much life insurance can I get?", "icon": "users" },
+    { "key": "legal", "title": "Legal plan", "description": "High and Standard options", "question": "What does the legal plan cover?", "icon": "scale" },
+    { "key": "accounts", "title": "FSA, HSA and HRA", "description": "Spending accounts and claims", "question": "How do the FSA and HSA work?", "icon": "wallet" },
+    { "key": "financial", "title": "Financial planning", "description": "Up to $400 a year reimbursed", "question": "What is the financial planning reimbursement?", "icon": "dollar" }
   ],
-  "suggestionPages": [
-    ["medical", "dental", "vision", "accounts"],
-    ["disability", "life", "legal", "financial"]
-  ],
+  "suggestions": ["life-change", "choose-medical", "fsa-hsa", "dental-vision", "disability", "life", "legal", "financial"],
   "quickQuestions": [
+    "Talk to a benefits person",
     "I just had a baby. What do I need to do?",
     "What is the difference between an HRA and an HSA?",
-    "Does the vision plan cover eye exams?",
-    "How do I file an FSA claim?"
+    "Does the vision plan cover eye exams?"
+  ],
+  "lifeEventPromptEnding": "State the deadline for making changes, and offer the benefits contact.",
+  "lifeEventPills": [
+    { "id": "L1", "label": "I'm having or adopting a baby", "prompt": "Explain what the employee should do for a birth or adoption: adding the child to medical, dental and vision, the deadline, dependent care FSA, life insurance beneficiaries, and leave.", "benefitsTouched": "Medical, dental, vision, FSA, life, leave", "audienceRule": "All" },
+    { "id": "L2", "label": "I'm getting married", "prompt": "Explain adding a spouse to coverage, the deadline, documents needed, and updating beneficiaries and tax withholding.", "benefitsTouched": "Medical, dental, vision, life, tax", "audienceRule": "All" },
+    { "id": "L3", "label": "I'm going through a divorce", "prompt": "Explain removing a spouse from coverage, the deadline, what happens to their coverage, and updating beneficiaries. Keep a neutral, practical tone.", "benefitsTouched": "Medical, dental, vision, life", "audienceRule": "All" },
+    { "id": "L4", "label": "My child is turning 26", "prompt": "Explain when a dependent loses coverage at 26, the date coverage ends, and the options available to them afterward.", "benefitsTouched": "Medical, dental, vision", "audienceRule": "All" },
+    { "id": "L5", "label": "Am I ready for Medicare?", "prompt": "Explain how Medicare works alongside our coverage for an active employee approaching 65, enrollment timing, and how Medicare enrollment affects HSA contributions. Recommend confirming personal decisions with the benefits team or Social Security.", "benefitsTouched": "Medicare, medical, HSA", "audienceRule": "Age 63+ if known; else on request" },
+    { "id": "L6", "label": "I'm thinking about retiring", "prompt": "Explain what happens to each benefit at retirement, any retiree coverage, conversion or portability options for life insurance, and Medicare timing if relevant.", "benefitsTouched": "All", "audienceRule": "Age 55+ if known" },
+    { "id": "L7", "label": "I just started here", "prompt": "Explain the new-hire enrollment window and deadline, what happens if they miss it, and the main choices to make.", "benefitsTouched": "All", "audienceRule": "Tenure under 30 days – may need to ask this" },
+    { "id": "L8", "label": "I lost other coverage", "prompt": "Explain how losing coverage elsewhere (a spouse's plan, for example) lets the employee enroll mid-year, and the deadline.", "benefitsTouched": "Medical, dental, vision", "audienceRule": "All" },
+    { "id": "L9", "label": "Someone in my family died", "prompt": "Explain, gently and briefly, how to file a life insurance claim, update coverage for remaining dependents, and reach support such as the EAP. Lead with the benefits contact.", "benefitsTouched": "Life, medical, EAP", "audienceRule": "On request only; never auto-surfaced" }
+  ],
+  "decisionExplainerPills": [
+    { "id": "E1", "label": "Which plan costs less for me?", "type": "Decision", "prompt": "Ask coverage tier and expected care, then estimate total yearly cost (premiums plus likely out-of-pocket) for each plan, showing the math and assumptions." },
+    { "id": "E2", "label": "Is a high-deductible plan right for me?", "type": "Decision", "prompt": "Explain the trade-off of a lower premium for a higher deductible plus HSA. Ask about expected care and comfort with upfront costs." },
+    { "id": "E3", "label": "HSA vs. FSA: what's the difference?", "type": "Explainer", "prompt": "Compare ownership, rollover, contribution limits for the current plan year, eligibility, and what each can pay for." },
+    { "id": "E4", "label": "What can I buy with my FSA?", "type": "Explainer", "prompt": "Explain eligible expense categories with common examples and how to submit claims." },
+    { "id": "E5", "label": "How does dependent care FSA work?", "type": "Explainer", "prompt": "Explain eligible care, the annual limit, and how reimbursement works." },
+    { "id": "E6", "label": "What's a deductible vs. out-of-pocket max?", "type": "Explainer", "prompt": "Explain deductible, copay, coinsurance and out-of-pocket maximum using a simple worked example." },
+    { "id": "E7", "label": "Is my doctor in network?", "type": "Explainer", "prompt": "Explain how to check network status with each carrier's provider search, and what happens out of network. Do not guess whether a specific provider is in network." },
+    { "id": "E8", "label": "How much life insurance do I have?", "type": "Explainer", "prompt": "Explain basic life coverage we provide and any supplemental options. Do not state the employee's personal amount unless enrollment data is connected." },
+    { "id": "E9", "label": "What does disability insurance cover?", "type": "Explainer", "prompt": "Explain short- and long-term disability: when it starts, how much it pays, and how to file." },
+    { "id": "E11", "label": "Does vision cover contacts?", "type": "Explainer", "prompt": "Explain the vision allowance for frames, lenses and contacts, and frequency limits." },
+    { "id": "E12", "label": "What extra benefits do we have?", "type": "Explainer", "prompt": "List voluntary and wellbeing benefits (EAP, and others in the knowledge base) in one line each, and offer to go deeper on any." }
+  ],
+  "seasonalPills": [
+    { "id": "S1", "label": "What's changing for next year?", "activeWindow": "Open enrollment", "prompt": "Summarize what changed in our benefits for the coming plan year: premiums, plan design, new or removed options. Use only next-year documents." },
+    { "id": "S2", "label": "Do I need to do anything this enrollment?", "activeWindow": "Open enrollment", "prompt": "Explain what happens if the employee does nothing (which elections roll over and which, like FSA, must be re-elected), and the deadline." },
+    { "id": "S3", "label": "How much should I put in my FSA?", "activeWindow": "Open enrollment", "prompt": "Help estimate a contribution: ask about predictable expenses (prescriptions, glasses, planned dental work), then explain the use-it-or-lose-it rule and our carryover or grace period." },
+    { "id": "S4", "label": "I still have FSA money left", "activeWindow": "Open enrollment through run-out", "prompt": "Explain the deadline to spend or claim, our grace period or carryover, and eligible purchases." },
+    { "id": "S5", "label": "Where are my tax forms?", "activeWindow": "January to May", "prompt": "Explain which benefits-related tax forms the employee may receive (W-2 codes, Form 1095, HSA Forms 1099-SA and 5498-SA), when, and where to find them." },
+    { "id": "S6", "label": "How do HSA contributions affect my taxes?", "activeWindow": "Open Enrollment to May", "prompt": "Explain the tax treatment of HSA contributions, the prior-year contribution deadline, and recommend a tax professional for personal situations." }
+  ],
+  "followUpPills": [
+    { "id": "F1", "label": "What would this cost per paycheck?", "shownAfter": "Any plan explanation or comparison" },
+    { "id": "F2", "label": "Show me an example with real numbers", "shownAfter": "Deductible, coinsurance or HSA explanations" },
+    { "id": "F3", "label": "What's the deadline?", "shownAfter": "Any life event or enrollment answer" },
+    { "id": "F4", "label": "What documents do I need?", "shownAfter": "Adding or removing a dependent" },
+    { "id": "F5", "label": "How does this affect my FSA or HSA?", "shownAfter": "Plan comparisons, life events, Medicare" },
+    { "id": "F6", "label": "Explain that more simply", "shownAfter": "Any answer longer than two paragraphs" },
+    { "id": "F7", "label": "Where can I see this in the plan documents?", "shownAfter": "Any answer; returns the source document link" },
+    { "id": "F8", "label": "Talk to a benefits person", "shownAfter": "Any answer; always one of the options – I will provide contact info" }
+  ],
+  "heldBackPills": [
+    { "label": "How much of my deductible have I met?", "needs": "Claims data from the carrier – we don’t have this" },
+    { "label": "What am I enrolled in right now?", "needs": "Enrollment system data – Don’t know that we’ll be able to do this integration" },
+    { "label": "What's my FSA or HSA balance?", "needs": "Account administrator data – won’t have this info" },
+    { "label": "Who are my beneficiaries?", "needs": "Enrollment system data – Don’t know that we’ll be able to do this integration" }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "id": "medical-tier",
+  "title": null,
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [],
+  "sources": [],
+  "followUps": [
+    "Just me",
+    "Me + spouse",
+    "Me + children",
+    "Family"
+  ]
+}

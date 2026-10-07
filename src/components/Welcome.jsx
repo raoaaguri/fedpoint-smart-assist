@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Icon from './Icon';
 import BloubFace from './BloubFace';
 import ChipButton from './ChipButton';
-import { sfx } from '../utils/sound';
 
 
 function greeting() {
@@ -10,98 +9,44 @@ function greeting() {
   return h < 5 || h >= 17 ? 'Good evening' : h < 12 ? 'Good morning' : 'Good afternoon';
 }
 
+// Like the Smart Assist tiles: a blue ring icon, then the text. Narrow cards stack the icon above.
 function SuggestionCard({ topic, index, onAsk }) {
   return (
     <button
-      className="group relative h-[140px] overflow-hidden rounded-xl border border-line bg-white p-0 text-left shadow-card transition-[translate,scale,box-shadow,border-color] duration-400 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-[3px] hover:border-blue-100 hover:shadow-[0_18px_36px_-16px_rgba(15,23,42,0.2),0_2px_6px_rgba(0,0,0,0.04)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in phone:h-[126px]"
+      className="group relative flex min-h-[78px] font-din items-start gap-3 overflow-hidden rounded-xl border border-line bg-white py-3.5 pr-3.5 pl-[13px] text-left shadow-[0_1px_2px_rgba(0,16,41,0.04)] transition-[translate,scale,box-shadow,border-color] duration-350 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-0.5 hover:border-blue-light hover:shadow-[0_12px_28px_-14px_rgba(0,48,143,0.28),0_2px_6px_rgba(0,16,41,0.05)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in @max-[860px]:flex-col @max-[860px]:gap-2.5 phone:min-h-0 phone:gap-2.5 phone:px-[11px] phone:py-3"
       style={{ animationDelay: `${0.4 + index * 0.07}s` }}
-      aria-label={`${topic.title}: ${topic.description}`}
+      aria-label={topic.description ? `${topic.title}: ${topic.description}` : topic.title}
       onClick={() => onAsk(topic.question)}
     >
-      <span className="absolute top-[15px] left-4 z-[1] text-[17px] leading-[21px] font-bold whitespace-nowrap text-navy phone:top-[13px] phone:left-3.5 phone:text-[15px]">
-        {topic.title}
+      <span className="grid size-11 flex-none place-items-center rounded-full border-2 border-blue-vivid bg-white text-blue-vivid transition-[background-color,color,scale] duration-300 group-hover:scale-[1.06] group-hover:bg-blue-vivid group-hover:text-white phone:size-[38px]">
+        <Icon name={topic.icon} size={21} strokeWidth={2} />
       </span>
-      <span className="absolute top-[39px] left-4 z-[1] line-clamp-2 w-[56%] text-sm leading-[18px] text-ink-500 phone:top-9 phone:left-3.5 phone:w-[60%] phone:text-[12.5px] phone:leading-[17px] tiny:w-[70%]">
-        {topic.description}
-      </span>
-      <span
-        className="pointer-events-none absolute -right-2 -bottom-3 h-[88px] w-[132px] animate-float phone:-right-1.5 phone:-bottom-2 phone:h-[68px] phone:w-[102px]"
-        style={{ animationDelay: `${-index * 1.1}s` }}
-      >
-        <img
-          src={topic.image}
-          alt=""
-          draggable="false"
-          className="size-full origin-[60%_80%] object-contain transition-transform duration-700 ease-out-soft group-hover:scale-110 group-hover:-rotate-2"
-        />
+      <span className="min-w-0 pt-px @max-[860px]:pt-0">
+        <span className="block text-base leading-[1.25] font-semibold text-ink-900 transition-colors duration-250 group-hover:text-blue-vivid phone:text-[15px]">
+          {topic.title}
+        </span>
+        {topic.description && (
+          <span className="mt-[3px] line-clamp-2 text-[13.5px] leading-[1.35] text-ink-500 @max-[860px]:line-clamp-3 phone:text-[12.5px] tiny:w-[70%]">
+            {topic.description}
+          </span>
+        )}
       </span>
     </button>
   );
 }
 
 function CardSkeleton() {
-  return <div className="h-[140px] animate-pulse rounded-xl border border-line bg-grey-98 phone:h-[126px]" aria-hidden="true" />;
+  return <div className="h-[78px] animate-pulse rounded-xl border border-line bg-grey-98" aria-hidden="true" />;
 }
 
 function Suggestions({ topicsState, onAsk }) {
   const { data, loading, error, reload } = topicsState;
-  const viewport = useRef(null);
-  const [page, setPage] = useState(0);
-
-  const pages = data
-    ? data.suggestionPages.map((keys) => keys.map((k) => data.topics.find((t) => t.key === k)).filter(Boolean))
-    : [];
-
-  // Keep the current page aligned when the window is resized
-  useEffect(() => {
-    const onResize = () => {
-      const v = viewport.current;
-      if (v) v.scrollLeft = page * v.clientWidth;
-    };
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [page]);
-
-  const goPage = (p) => {
-    sfx.tap();
-    const v = viewport.current;
-    const target = Math.max(0, Math.min(pages.length - 1, p));
-    v?.scrollTo({ left: target * v.clientWidth, behavior: 'smooth' });
-  };
-
-  const onScroll = () => {
-    const v = viewport.current;
-    const p = Math.round(v.scrollLeft / Math.max(1, v.clientWidth));
-    if (p !== page) setPage(p);
-  };
-
-  const arrow = 'grid size-7 place-items-center rounded-md border-2 border-navy bg-white p-0 text-navy transition-[opacity,background-color] enabled:hover:bg-blue-50 disabled:opacity-35';
+  const cards = data ? data.suggestions.map((k) => data.topics.find((t) => t.key === k)).filter(Boolean) : [];
 
   return (
     <div className="@container mt-10 phone:mt-[26px]">
-      <div className="mb-[10.5px] flex animate-rise items-center justify-between" style={{ animationDelay: '0.34s' }}>
-        <span className="text-xs leading-[16.5px] font-bold tracking-[0.1em] text-ink-400 uppercase">Suggestions</span>
-        {pages.length > 1 && (
-          <span className="flex items-center gap-1.5">
-            <span className="mr-1.5 flex items-center gap-[5px]">
-              {pages.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goPage(i)}
-                  aria-label={`Show suggestions ${i + 1} of ${pages.length}`}
-                  aria-current={i === page ? 'true' : undefined}
-                  className={`h-1.5 rounded-[3px] border-0 p-0 transition-[width,background-color] duration-350 ease-out-soft ${i === page ? 'w-[18px] bg-navy' : 'w-1.5 bg-[#d1d5db]'}`}
-                />
-              ))}
-            </span>
-            <button className={arrow} onClick={() => goPage(page - 1)} disabled={page === 0} aria-label="Previous suggestions">
-              <Icon name="chevLeft" size={14} strokeWidth={2.2} />
-            </button>
-            <button className={arrow} onClick={() => goPage(page + 1)} disabled={page === pages.length - 1} aria-label="More suggestions">
-              <Icon name="chev" size={14} strokeWidth={2.2} />
-            </button>
-          </span>
-        )}
+      <div className="mb-[10.5px] animate-rise" style={{ animationDelay: '0.34s' }}>
+        <span className="font-din text-xs leading-[16.5px] font-bold tracking-[0.1em] text-ink-400 uppercase">Suggestions</span>
       </div>
 
       {error ? (
@@ -110,23 +55,10 @@ function Suggestions({ topicsState, onAsk }) {
           <ChipButton onClick={reload}>Try again</ChipButton>
         </div>
       ) : (
-        <div
-          ref={viewport}
-          onScroll={onScroll}
-          className="no-scrollbar -mx-3 -mt-2 -mb-[22px] flex snap-x snap-mandatory scroll-px-3 gap-6 overflow-x-auto overscroll-x-contain px-3 pt-2 pb-[22px]"
-          aria-busy={loading}
-        >
-          {loading ? (
-            <div className="grid flex-[0_0_100%] grid-cols-4 gap-3 @max-[820px]:grid-cols-2 phone:gap-2.5">
-              {Array.from({ length: 4 }, (_, i) => <CardSkeleton key={i} />)}
-            </div>
-          ) : (
-            pages.map((cards, p) => (
-              <div key={p} className="grid flex-[0_0_100%] snap-start snap-always grid-cols-4 gap-3 @max-[820px]:grid-cols-2 phone:gap-2.5">
-                {cards.map((t, i) => <SuggestionCard key={t.key} topic={t} index={i} onAsk={onAsk} />)}
-              </div>
-            ))
-          )}
+        <div className="grid grid-cols-4 gap-3 @max-[640px]:grid-cols-2 @max-[640px]:gap-2.5" aria-busy={loading}>
+          {loading
+            ? Array.from({ length: 8 }, (_, i) => <CardSkeleton key={i} />)
+            : cards.map((t, i) => <SuggestionCard key={t.key} topic={t} index={i} onAsk={onAsk} />)}
         </div>
       )}
     </div>

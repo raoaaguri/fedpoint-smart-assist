@@ -1,0 +1,13 @@
+{
+  "id": "medical-care",
+  "title": null,
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [],
+  "sources": [],
+  "followUps": [
+    "Mostly preventive",
+    "Some visits",
+    "Ongoing condition or planned procedure"
+  ]
+}

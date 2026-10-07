@@ -1,0 +1,19 @@
+{
+  "id": "life-change",
+  "title": null,
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [],
+  "sources": [],
+  "followUps": [
+    "I'm having or adopting a baby",
+    "I'm getting married",
+    "I'm going through a divorce",
+    "My child is turning 26",
+    "Am I ready for Medicare?",
+    "I'm thinking about retiring",
+    "I just started here",
+    "I lost other coverage",
+    "Someone in my family died"
+  ]
+}
