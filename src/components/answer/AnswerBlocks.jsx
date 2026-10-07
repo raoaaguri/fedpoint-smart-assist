@@ -64,7 +64,7 @@ export default function AnswerBlocks({ blocks, tier }) {
       case 'paragraph':
         return <p key={i} className="mb-3"><RichText text={b.text} /></p>;
       case 'table':
-        return <CompareTable key={i} columns={b.columns} rows={b.rows} tier={tier} />;
+        return <CompareTable key={i} columns={b.columns} rows={b.rows} rowHeader={b.rowHeader} tier={tier} />;
       case 'facts':
         return <Facts key={i} items={b.items} labelSuffix={b.labelSuffix} />;
       case 'note':

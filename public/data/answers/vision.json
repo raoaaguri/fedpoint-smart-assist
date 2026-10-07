@@ -5,41 +5,122 @@
   "showHouseholdNote": false,
   "blocks": [
     {
-      "type": "paragraph",
-      "text": "The DeltaVision plan covers hardware only, so it helps with glasses and contacts but not with the exam itself."
-    },
-    {
-      "type": "facts",
-      "items": [
+      "type": "table",
+      "rowHeader": "DeltaVision Plan Summary",
+      "columns": [
         {
-          "label": "Frames",
-          "text": "$150 allowance every 12 months, then 20% off the balance."
+          "title": "Network Benefits"
         },
         {
-          "label": "Standard lenses",
-          "text": "$10 copay for single vision, bifocal or trifocal."
+          "title": "Non-Network Reimbursement"
+        }
+      ],
+      "rows": [
+        {
+          "section": "Frames every 12 months:"
         },
         {
-          "label": "Contacts",
-          "text": "$150 allowance instead of glasses. Conventional contacts get 15% off the balance."
+          "label": "Any available frame at provider location",
+          "cells": [
+            "$150 allowance, then 20% off balance",
+            "Up to $75"
+          ]
         },
         {
-          "label": "Laser vision correction",
-          "text": "15% off retail or 5% off promotional price."
+          "section": "Standard Plastic Lenses every 12 months"
+        },
+        {
+          "label": "Single vision / Bifocal / Trifocal",
+          "cells": [
+            "Member co-pay $10, plan pays balance",
+            "Up to $25 / $40 / $55"
+          ]
+        },
+        {
+          "section": "Lens Options"
+        },
+        {
+          "label": "UV coating / Tint / Standard scratch resistance",
+          "cells": [
+            "Member co-pay $15 each",
+            "None"
+          ]
+        },
+        {
+          "label": "Standard polycarbonate",
+          "cells": [
+            "Member co-pay $40",
+            "None"
+          ]
+        },
+        {
+          "label": "Standard anti-reflective coating",
+          "cells": [
+            "Member co-pay $45",
+            "None"
+          ]
+        },
+        {
+          "label": "Standard progressive",
+          "cells": [
+            "Member co-pay $75",
+            "None"
+          ]
+        },
+        {
+          "label": "Premium progressive",
+          "cells": [
+            "$75 co-pay, 80% of charge less $120 allowance",
+            "None"
+          ]
+        },
+        {
+          "label": "Other add-ons and services",
+          "cells": [
+            "20% off retail price",
+            "None"
+          ]
+        },
+        {
+          "section": "Contact Lenses every 12 months:"
+        },
+        {
+          "label": "Conventional",
+          "cells": [
+            "$150 allowance, then 15% off balance",
+            "Up to $120"
+          ]
+        },
+        {
+          "label": "Disposable",
+          "cells": [
+            "$150 allowance, member pays balance",
+            "Up to $120"
+          ]
+        },
+        {
+          "label": "Medically necessary",
+          "cells": [
+            "Paid in full",
+            "Up to $200"
+          ]
+        },
+        {
+          "label": "Laser Vision Correction - Lasik or PRK",
+          "cells": [
+            "15% off retail price or 5% off promotional price",
+            "None"
+          ]
         }
       ]
-    },
-    {
-      "type": "note",
-      "icon": "info",
-      "text": "This plan doesn't list an eye exam benefit. Check with your medical plan or your provider."
     }
   ],
   "sources": [
     "dvision"
   ],
   "followUps": [
-    "Where can I buy glasses online?",
-    "Can I get both glasses and contacts?"
+    "What is covered for frames?",
+    "What do standard plastic lenses cost?",
+    "What lens options are available?"
   ]
 }

@@ -12,4 +12,8 @@ export const MOCK_FILES = {
   topics: '/topics.json',
   documents: '/documents.json',
   answer: (id) => `/answers/${id}.json`,
+  qa: (id) => `/qa/${id}.json`,
 };
+
+// Q&A files the mock checks before falling back to keyword matching
+export const MOCK_QA = ['dental', 'vision'];

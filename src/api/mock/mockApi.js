@@ -1,7 +1,18 @@
 import { mockClient } from '../client';
-import { MOCK_FILES } from '../endpoints';
+import { MOCK_FILES, MOCK_QA } from '../endpoints';
 import { config } from '../../config/env';
 import { matchAnswer } from './matchAnswer';
+import { qaAnswer } from './qaAnswer';
+
+// Q&A files are loaded once and reused
+let qaFiles = null;
+function loadQa(signal) {
+  qaFiles ??= Promise.all(MOCK_QA.map((id) => mockClient.get(MOCK_FILES.qa(id), { signal }))).catch((err) => {
+    qaFiles = null;
+    throw err;
+  });
+  return qaFiles;
+}
 
 // Waits like a network round trip, and stops early if the request is aborted.
 function delay(signal) {
@@ -28,6 +39,10 @@ export const mockApi = {
 
   async ask({ question }, { signal } = {}) {
     await delay(signal);
+    for (const file of await loadQa(signal)) {
+      const answer = qaAnswer(file, question);
+      if (answer) return answer;
+    }
     return mockClient.get(MOCK_FILES.answer(matchAnswer(question)), { signal });
   },
 

@@ -1,52 +1,217 @@
 {
   "id": "dental",
-  "title": "Dental procedure costs",
-  "topic": "Dental cost",
+  "title": "Delta Dental Plan",
+  "topic": "Dental",
   "showHouseholdNote": false,
   "blocks": [
     {
-      "type": "paragraph",
-      "text": "Your Delta Dental plan pays 80% of basic work like root canals after a $50 deductible, and 50% of major work like crowns. Try your own dentist's quotes below."
-    },
-    {
-      "type": "calculator",
-      "title": "Estimate your share",
-      "hint": "Example fees. Replace with your quote.",
-      "deductible": 50,
-      "annualMax": 1500,
-      "fields": [
+      "type": "table",
+      "rowHeader": "Item",
+      "columns": [
         {
-          "key": "rootCanal",
-          "label": "Root canal fee",
-          "ariaLabel": "Root canal fee in dollars",
-          "defaultValue": 1000,
-          "coinsurance": 0.8,
-          "applyDeductible": true
-        },
-        {
-          "key": "crown",
-          "label": "Crown fee",
-          "ariaLabel": "Crown fee in dollars",
-          "defaultValue": 1400,
-          "coinsurance": 0.5,
-          "applyDeductible": false
+          "title": "Plan detail"
         }
       ],
-      "planLabel": "Delta Dental pays",
-      "youLabel": "You pay",
-      "defaultNote": "Assumes a participating dentist, no other claims this year, and a $1,500 annual maximum.",
-      "maxNote": "The {max} annual maximum applies, so you cover the amount above it."
+      "rows": [
+        {
+          "label": "Network",
+          "cells": [
+            "Delta Dental PPO plus Premier Network"
+          ]
+        },
+        {
+          "label": "Office visit copayment",
+          "cells": [
+            "None"
+          ]
+        },
+        {
+          "label": "Coverage A: Diagnostic / Preventive",
+          "cells": [
+            "Delta Dental pays 100%; no waiting period; no deductible"
+          ]
+        },
+        {
+          "label": "Coverage B: Basic Restorative",
+          "cells": [
+            "Delta Dental pays 80%; no waiting period; calendar-year deductible $50 per person / $150 per family"
+          ]
+        },
+        {
+          "label": "Coverage C: Major Restorative",
+          "cells": [
+            "Delta Dental pays 50%; no waiting period; no deductible shown in the Coverage C column"
+          ]
+        },
+        {
+          "label": "Coverage D: Orthodontics",
+          "cells": [
+            "Delta Dental pays 50%; no waiting period; no deductible shown in the Coverage D column"
+          ]
+        },
+        {
+          "label": "Calendar-year maximum",
+          "cells": [
+            "$1,500 per person, potentially up to $3,000 per person with Double-Up Max"
+          ]
+        },
+        {
+          "label": "Orthodontic lifetime maximum",
+          "cells": [
+            "$1,500 per person"
+          ]
+        },
+        {
+          "label": "Domestic partner coverage",
+          "cells": [
+            "Not included"
+          ]
+        },
+        {
+          "label": "Additional program",
+          "cells": [
+            "Health through Oral Wellness® included"
+          ]
+        }
+      ]
     },
     {
-      "type": "paragraph",
-      "text": "Double-Up Max can raise the yearly limit up to $3,000 if you carry over unused benefits."
+      "type": "note",
+      "icon": "info",
+      "text": "**How percentages are calculated:** Benefit percentages are based on actual charges submitted up to the Maximum Allowable Charge for participating dentists, or Delta Dental’s allowance for non-participating dentists."
+    },
+    {
+      "type": "table",
+      "rowHeader": "Covered Services and Frequency Limits",
+      "columns": [],
+      "rows": [
+        {
+          "section": "Coverage A — Diagnostic / Preventive (100%)"
+        },
+        {
+          "label": "Evaluations twice in a 12-month period, including periodic, limited, problem-focused, and comprehensive evaluations.",
+          "cells": []
+        },
+        {
+          "label": "Complete-series or panoramic x-rays once in a 5-year period.",
+          "cells": []
+        },
+        {
+          "label": "Bitewing x-rays once in a 12-month period.",
+          "cells": []
+        },
+        {
+          "label": "Individual-tooth x-rays as necessary.",
+          "cells": []
+        },
+        {
+          "label": "Brush biopsy once in a 12-month period.",
+          "cells": []
+        },
+        {
+          "label": "Two cleanings in a 12-month period.",
+          "cells": []
+        },
+        {
+          "label": "Fluoride once in a 12-month period through age 19.",
+          "cells": []
+        },
+        {
+          "label": "Space maintainers through age 16.",
+          "cells": []
+        },
+        {
+          "label": "Sealants on permanent molars once every 3 years per tooth for children through age 19.",
+          "cells": []
+        },
+        {
+          "section": "Coverage B — Basic Restorative (80%)"
+        },
+        {
+          "label": "Amalgam (silver) fillings and resin restorations.",
+          "cells": []
+        },
+        {
+          "label": "Surgical and routine extractions.",
+          "cells": []
+        },
+        {
+          "label": "Root canal therapy.",
+          "cells": []
+        },
+        {
+          "label": "Periodontal maintenance (cleaning).",
+          "cells": []
+        },
+        {
+          "label": "Treatment of gum disease.",
+          "cells": []
+        },
+        {
+          "label": "Clinical crown lengthening once per tooth per lifetime.",
+          "cells": []
+        },
+        {
+          "label": "Repair of a removable denture to its original condition.",
+          "cells": []
+        },
+        {
+          "label": "Emergency palliative treatment.",
+          "cells": []
+        },
+        {
+          "section": "Coverage C — Major Restorative (50%)"
+        },
+        {
+          "label": "Removable and fixed partial dentures (bridges), and complete dentures.",
+          "cells": []
+        },
+        {
+          "label": "Denture rebase and reline.",
+          "cells": []
+        },
+        {
+          "label": "Crowns.",
+          "cells": []
+        },
+        {
+          "label": "Onlays.",
+          "cells": []
+        },
+        {
+          "label": "Implants.",
+          "cells": []
+        },
+        {
+          "section": "Coverage D — Orthodontics (50%)"
+        },
+        {
+          "label": "Correction of malposed (crooked) teeth for dependent children and adults.",
+          "cells": []
+        },
+        {
+          "label": "If the plan includes an office visit copayment, that copayment does not apply to orthodontic services. This particular outline states the office visit copayment is none.",
+          "cells": []
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "icon": "info",
+      "text": "**Cleaning rule:** Cleanings are limited to two in a 12-month period. The two may be routine cleanings under Coverage A, periodontal cleanings under Coverage B, or a combination of both."
+    },
+    {
+      "type": "note",
+      "icon": "info",
+      "text": "**Annual maximum reminder:** Covered diagnostic and preventive expenses also count toward the annual maximum; they are not excluded from that maximum."
     }
   ],
   "sources": [
     "dental"
   ],
   "followUps": [
+    "What is the deductible?",
     "What is Double-Up Max?",
-    "Does the plan cover braces?"
+    "How do I check if my dentist participates?"
   ]
 }

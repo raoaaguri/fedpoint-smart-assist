@@ -5,6 +5,7 @@ export function matchAnswer(text) {
   if (/\b\d{3}[- ]?\d{2}[- ]?\d{4}\b/.test(t)) return 'privacy';
   if (t === 'something changed in my life') return 'life-change';
   if (t === 'help me choose a medical plan') return 'medical-tier';
+  if (t === "what's covered for dental and vision?") return 'dental-vision';
   if (['just me', 'me + spouse', 'me + children', 'family'].includes(t)) return 'medical-care';
   if (/(talk|speak).*(person|human|someone|agent)|contact|phone number|call (someone|cigna|delta)|\bhuman\b/.test(t)) return 'contacts';
   if (/baby|newborn|birth|adopt|married|marriage|wedding|lost .*coverage|losing .*coverage|life event|qualifying/.test(t)) return 'life-event';

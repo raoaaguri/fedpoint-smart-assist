@@ -1,0 +1,12 @@
+{
+  "id": "dental-vision",
+  "title": null,
+  "topic": null,
+  "showHouseholdNote": false,
+  "blocks": [],
+  "sources": [],
+  "followUps": [
+    "Dental",
+    "Vision"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "vision",
+  "sourceDoc": "dvision",
+  "rowHeader": "DeltaVision Plan Summary",
+  "columns": {
+    "network": "Network Benefits",
+    "nonNetwork": "Non-Network Reimbursement"
+  },
+  "sections": [
+    {
+      "title": "Frames every 12 months:",
+      "frequencyMonths": 12,
+      "rows": [
+        {
+          "key": "frames",
+          "label": "Any available frame at provider location",
+          "network": { "text": "$150 allowance, then 20% off balance", "allowance": 150, "discountOnBalance": 0.2 },
+          "nonNetwork": { "text": "Up to $75", "reimbursementMax": 75 }
+        }
+      ]
+    },
+    {
+      "title": "Standard Plastic Lenses every 12 months",
+      "frequencyMonths": 12,
+      "rows": [
+        {
+          "key": "lenses",
+          "label": "Single vision / Bifocal / Trifocal",
+          "network": { "text": "Member co-pay $10, plan pays balance", "copay": 10, "planPaysBalance": true },
+          "nonNetwork": { "text": "Up to $25 / $40 / $55", "reimbursementMax": { "Single vision": 25, "Bifocal": 40, "Trifocal": 55 } }
+        }
+      ]
+    },
+    {
+      "title": "Lens Options",
+      "rows": [
+        {
+          "key": "uv-tint-scratch",
+          "label": "UV coating / Tint / Standard scratch resistance",
+          "network": { "text": "Member co-pay $15 each", "copayEach": 15 },
+          "nonNetwork": { "text": "None", "covered": false }
+        },
+        {
+          "key": "polycarbonate",
+          "label": "Standard polycarbonate",
+          "network": { "text": "Member co-pay $40", "copay": 40 },
+          "nonNetwork": { "text": "None", "covered": false }
+        },
+        {
+          "key": "anti-reflective",
+          "label": "Standard anti-reflective coating",
+          "network": { "text": "Member co-pay $45", "copay": 45 },
+          "nonNetwork": { "text": "None", "covered": false }
+        },
+        {
+          "key": "standard-progressive",
+          "label": "Standard progressive",
+          "network": { "text": "Member co-pay $75", "copay": 75 },
+          "nonNetwork": { "text": "None", "covered": false }
+        },
+        {
+          "key": "premium-progressive",
+          "label": "Premium progressive",
+          "network": { "text": "$75 co-pay, 80% of charge less $120 allowance", "copay": 75, "percentOfCharge": 0.8, "allowance": 120 },
+          "nonNetwork": { "text": "None", "covered": false }
+        },
+        {
+          "key": "other-add-ons",
+          "label": "Other add-ons and services",
+          "network": { "text": "20% off retail price", "discountOffRetail": 0.2 },
+          "nonNetwork": { "text": "None", "covered": false }
+        }
+      ]
+    },
+    {
+      "title": "Contact Lenses every 12 months:",
+      "frequencyMonths": 12,
+      "rows": [
+        {
+          "key": "contacts-conventional",
+          "label": "Conventional",
+          "network": { "text": "$150 allowance, then 15% off balance", "allowance": 150, "discountOnBalance": 0.15 },
+          "nonNetwork": { "text": "Up to $120", "reimbursementMax": 120 }
+        },
+        {
+          "key": "contacts-disposable",
+          "label": "Disposable",
+          "network": { "text": "$150 allowance, member pays balance", "allowance": 150, "memberPaysBalance": true },
+          "nonNetwork": { "text": "Up to $120", "reimbursementMax": 120 }
+        },
+        {
+          "key": "contacts-medically-necessary",
+          "label": "Medically necessary",
+          "network": { "text": "Paid in full", "paidInFull": true },
+          "nonNetwork": { "text": "Up to $200", "reimbursementMax": 200 }
+        }
+      ]
+    },
+    {
+      "title": null,
+      "rows": [
+        {
+          "key": "laser",
+          "label": "Laser Vision Correction - Lasik or PRK",
+          "network": { "text": "15% off retail price or 5% off promotional price", "discountOffRetail": 0.15, "discountOffPromotional": 0.05 },
+          "nonNetwork": { "text": "None", "covered": false }
+        }
+      ]
+    }
+  ]
+}

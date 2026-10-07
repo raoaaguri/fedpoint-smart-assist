@@ -1,0 +1,97 @@
+{
+  "id": "vision",
+  "topic": "Vision",
+  "sourceDocs": [
+    "dvision"
+  ],
+  "source": {
+    "title": "DeltaVisionPlanSummary.html",
+    "table": "DeltaVision Plan Summary"
+  },
+  "qa": [
+    {
+      "id": "V1",
+      "section": "Frames every 12 months:",
+      "question": "What is covered for frames?",
+      "answer": "Frames every 12 months:\n**Any available frame at provider location**\nNetwork Benefits: $150 allowance, then 20% off balance\nNon-Network Reimbursement: Up to $75"
+    },
+    {
+      "id": "V2",
+      "section": "Standard Plastic Lenses every 12 months",
+      "question": "What do standard plastic lenses cost?",
+      "answer": "Standard Plastic Lenses every 12 months\n**Single vision / Bifocal / Trifocal**\nNetwork Benefits: Member co-pay $10, plan pays balance\nNon-Network Reimbursement: Up to $25 / $40 / $55"
+    },
+    {
+      "id": "V3",
+      "section": "Lens Options",
+      "question": "What lens options are available?",
+      "answer": "**Lens Options**\n• UV coating / Tint / Standard scratch resistance — Network Benefits: Member co-pay $15 each. Non-Network Reimbursement: None.\n• Standard polycarbonate — Network Benefits: Member co-pay $40. Non-Network Reimbursement: None.\n• Standard anti-reflective coating — Network Benefits: Member co-pay $45. Non-Network Reimbursement: None.\n• Standard progressive — Network Benefits: Member co-pay $75. Non-Network Reimbursement: None.\n• Premium progressive — Network Benefits: $75 co-pay, 80% of charge less $120 allowance. Non-Network Reimbursement: None.\n• Other add-ons and services — Network Benefits: 20% off retail price. Non-Network Reimbursement: None."
+    },
+    {
+      "id": "V4",
+      "section": "Lens Options",
+      "question": "What does UV coating, tint or scratch resistance cost?",
+      "answer": "**UV coating / Tint / Standard scratch resistance**\nNetwork Benefits: Member co-pay $15 each\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V5",
+      "section": "Lens Options",
+      "question": "What does polycarbonate cost?",
+      "answer": "**Standard polycarbonate**\nNetwork Benefits: Member co-pay $40\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V6",
+      "section": "Lens Options",
+      "question": "What does anti-reflective coating cost?",
+      "answer": "**Standard anti-reflective coating**\nNetwork Benefits: Member co-pay $45\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V7",
+      "section": "Lens Options",
+      "question": "What does a standard progressive lens cost?",
+      "answer": "**Standard progressive**\nNetwork Benefits: Member co-pay $75\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V8",
+      "section": "Lens Options",
+      "question": "What does a premium progressive lens cost?",
+      "answer": "**Premium progressive**\nNetwork Benefits: $75 co-pay, 80% of charge less $120 allowance\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V9",
+      "section": "Lens Options",
+      "question": "What about other add-ons and services?",
+      "answer": "**Other add-ons and services**\nNetwork Benefits: 20% off retail price\nNon-Network Reimbursement: None"
+    },
+    {
+      "id": "V10",
+      "section": "Contact Lenses every 12 months:",
+      "question": "What is covered for contact lenses?",
+      "answer": "**Contact Lenses every 12 months:**\n• Conventional — Network Benefits: $150 allowance, then 15% off balance. Non-Network Reimbursement: Up to $120.\n• Disposable — Network Benefits: $150 allowance, member pays balance. Non-Network Reimbursement: Up to $120.\n• Medically necessary — Network Benefits: Paid in full. Non-Network Reimbursement: Up to $200."
+    },
+    {
+      "id": "V11",
+      "section": "Contact Lenses every 12 months:",
+      "question": "What is covered for conventional contact lenses?",
+      "answer": "Contact Lenses every 12 months:\n**Conventional**\nNetwork Benefits: $150 allowance, then 15% off balance\nNon-Network Reimbursement: Up to $120"
+    },
+    {
+      "id": "V12",
+      "section": "Contact Lenses every 12 months:",
+      "question": "What is covered for disposable contact lenses?",
+      "answer": "Contact Lenses every 12 months:\n**Disposable**\nNetwork Benefits: $150 allowance, member pays balance\nNon-Network Reimbursement: Up to $120"
+    },
+    {
+      "id": "V13",
+      "section": "Contact Lenses every 12 months:",
+      "question": "What is covered for medically necessary contact lenses?",
+      "answer": "Contact Lenses every 12 months:\n**Medically necessary**\nNetwork Benefits: Paid in full\nNon-Network Reimbursement: Up to $200"
+    },
+    {
+      "id": "V14",
+      "section": "Laser Vision Correction - Lasik or PRK",
+      "question": "Is Lasik or PRK covered?",
+      "answer": "**Laser Vision Correction - Lasik or PRK**\nNetwork Benefits: 15% off retail price or 5% off promotional price\nNon-Network Reimbursement: None"
+    }
+  ]
+}
