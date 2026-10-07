@@ -13,7 +13,7 @@ function greeting() {
 function SuggestionCard({ topic, index, onAsk }) {
   return (
     <button
-      className="group relative flex min-h-[78px] font-din items-start gap-3 overflow-hidden rounded-xl border border-line bg-white py-3.5 pr-3.5 pl-[13px] text-left shadow-[0_1px_2px_rgba(0,16,41,0.04)] transition-[translate,scale,box-shadow,border-color] duration-350 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-0.5 hover:border-blue-light hover:shadow-[0_12px_28px_-14px_rgba(0,48,143,0.28),0_2px_6px_rgba(0,16,41,0.05)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in @max-[860px]:flex-col @max-[860px]:gap-2.5 short:min-h-[72px] short:py-3 phone:min-h-0 phone:gap-2.5 phone:px-[11px] phone:py-3"
+      className="group relative flex min-h-[78px] font-din items-start gap-3 overflow-hidden rounded-xl border border-line bg-white py-3.5 pr-3.5 pl-[13px] text-left shadow-[0_1px_2px_rgba(0,16,41,0.04)] transition-[translate,scale,box-shadow,border-color] duration-350 ease-out-soft [-webkit-tap-highlight-color:transparent] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-aqua before:to-blue before:transition-transform before:duration-450 before:ease-out-soft hover:-translate-y-0.5 hover:border-blue-light hover:shadow-[0_12px_28px_-14px_rgba(0,48,143,0.28),0_2px_6px_rgba(0,16,41,0.05)] hover:before:scale-x-100 active:scale-[0.97] animate-card-in @max-[860px]:flex-col @max-[860px]:gap-2.5 short:min-h-[72px] short:py-3 short:items-center short:@max-[860px]:items-start short:@max-[860px]:justify-center narrow:justify-center phone:min-h-0 phone:gap-2.5 phone:px-[11px] phone:py-3"
       style={{ animationDelay: `${0.4 + index * 0.07}s` }}
       aria-label={topic.description ? `${topic.title}: ${topic.description}` : topic.title}
       onClick={() => onAsk(topic.question)}
@@ -26,7 +26,7 @@ function SuggestionCard({ topic, index, onAsk }) {
           {topic.title}
         </span>
         {topic.description && (
-          <span className="mt-[3px] line-clamp-2 narrow:hidden text-[13.5px] leading-[1.35] text-ink-500 @max-[860px]:line-clamp-3 phone:text-[12.5px] tiny:w-[70%]">
+          <span className="mt-[3px] line-clamp-2 narrow:hidden! short:hidden! text-[13.5px] leading-[1.35] text-ink-500 @max-[860px]:line-clamp-3 phone:text-[12.5px] tiny:w-[70%]">
             {topic.description}
           </span>
         )}
