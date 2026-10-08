@@ -26,8 +26,8 @@ export function qaAnswer(file, text) {
     title: item.question,
     topic: file.topic,
     showHouseholdNote: false,
-    blocks: [{ type: 'paragraph', text: item.answer }],
+    blocks: item.answer ? [{ type: 'paragraph', text: item.answer }] : [],
     sources: file.sourceDocs,
-    followUps: followUpsFor(file.qa, i),
+    followUps: item.followUps ?? followUpsFor(file.qa, i), // an item can list its own follow-ups
   };
 }

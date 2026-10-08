@@ -1,0 +1,161 @@
+{
+  "id": "life-events",
+  "topic": "Life event",
+  "sourceDocs": [],
+  "source": {
+    "title": "User Flow 1: “Something changed in my life”"
+  },
+  "qa": [
+    {
+      "id": "LE-L1",
+      "section": "3. Gather Minimal Context",
+      "question": "I’m having or adopting a baby",
+      "answer": "Is this a birth or an adoption?\nDo you already have medical coverage for yourself?",
+      "followUps": [
+        "Birth",
+        "Adoption",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L2",
+      "section": "3. Gather Minimal Context",
+      "question": "I’m getting married",
+      "answer": "Do you want to add or remove a spouse from your benefits?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L3",
+      "section": "3. Gather Minimal Context",
+      "question": "I’m going through a divorce",
+      "answer": "Do you want to add or remove a spouse from your benefits?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L4",
+      "section": "3. Gather Minimal Context",
+      "question": "My child is turning 26",
+      "answer": "Is your child currently on your plan?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L6",
+      "section": "3. Gather Minimal Context",
+      "question": "I’m thinking about retiring",
+      "answer": "Are you planning to retire in the next 12 months?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L8",
+      "section": "3. Gather Minimal Context",
+      "question": "I lost other coverage (for example, a spouse’s plan)",
+      "answer": "Whose coverage did you lose (your own, spouse’s, parent’s)?\nWhen did that coverage end?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L5",
+      "section": "5. Offer Follow-Up Tiles",
+      "question": "I’m approaching 65 / thinking about Medicare",
+      "answer": "",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L7",
+      "section": "5. Offer Follow-Up Tiles",
+      "question": "I just started at the company",
+      "answer": "",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-L9",
+      "section": "5. Offer Follow-Up Tiles",
+      "question": "Someone in my family died",
+      "answer": "",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-BIRTH",
+      "section": "4. Generate Life-Event Guidance",
+      "question": "Birth",
+      "answer": "For a birth or adoption, you can:\n• Add your child to medical, dental, and vision coverage.\n• Consider a dependent care FSA if you will have childcare costs.\n• Update your life insurance beneficiaries.\n• Review parental leave options.\n\nYou must make these changes within [CONFIRM: 30/60] days of the birth or adoption. After that, you generally must wait until the next open enrollment.\n\nYou’ll likely need a birth certificate or adoption paperwork.\n\nWould you like to know how this affects your FSA or HSA, or see what documents you’ll need?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-ADOPTION",
+      "section": "4. Generate Life-Event Guidance",
+      "question": "Adoption",
+      "answer": "For a birth or adoption, you can:\n• Add your child to medical, dental, and vision coverage.\n• Consider a dependent care FSA if you will have childcare costs.\n• Update your life insurance beneficiaries.\n• Review parental leave options.\n\nYou must make these changes within [CONFIRM: 30/60] days of the birth or adoption. After that, you generally must wait until the next open enrollment.\n\nYou’ll likely need a birth certificate or adoption paperwork.\n\nWould you like to know how this affects your FSA or HSA, or see what documents you’ll need?",
+      "followUps": [
+        "What’s the deadline?",
+        "What documents do I need?",
+        "How does this affect my FSA or HSA?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-F3",
+      "section": "6.1 What’s the deadline?",
+      "question": "What’s the deadline?",
+      "answer": "For this life event, you must make benefit changes within [CONFIRM: 30/60] days from the event date. If you miss this window, you usually must wait until the next open enrollment unless another qualifying event occurs.",
+      "followUps": [
+        "What documents do I need?",
+        "Talk to a benefits person"
+      ]
+    },
+    {
+      "id": "LE-F4",
+      "section": "6.2 What documents do I need?",
+      "question": "What documents do I need?",
+      "answer": "For [selected event], typical documents include:\n• Birth or adoption certificate (for new child)\n• Marriage certificate (for adding a spouse)\n• Divorce decree (for removing a spouse)\n• Proof of loss of coverage letter (for losing other coverage)\n\nYou’ll upload these in the benefits portal or provide them to HR if requested.",
+      "followUps": [
+        "Where do I upload these?",
+        "Talk to a benefits person"
+      ]
+    }
+  ]
+}

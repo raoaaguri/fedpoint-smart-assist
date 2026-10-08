@@ -141,11 +141,14 @@ export default function ChatView({ session, busy, documents, showTools, composer
     if (s) s.scrollTop = s.scrollHeight;
   }, []);
 
-  // Follow new messages unless the reader scrolled up
+  // Follow new messages unless the reader scrolled up. Asking a new question
+  // (typed or a follow-up chip) always brings the conversation back into view.
+  const lastRole = messages[messages.length - 1]?.role;
   useEffect(() => {
     const s = scroller.current;
+    if (lastRole === 'user') stick.current = true;
     if (s && stick.current) s.scrollTo({ top: s.scrollHeight, behavior: 'smooth' });
-  }, [messages.length, busy]);
+  }, [messages.length, busy, lastRole]);
 
   const onScroll = () => {
     const s = scroller.current;

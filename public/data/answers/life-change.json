@@ -3,17 +3,22 @@
   "title": null,
   "topic": null,
   "showHouseholdNote": false,
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "I’m sorry to hear things have changed. To guide you correctly, can you tell me which situation applies?"
+    }
+  ],
   "sources": [],
   "followUps": [
-    "I'm having or adopting a baby",
-    "I'm getting married",
-    "I'm going through a divorce",
+    "I’m having or adopting a baby",
+    "I’m getting married",
+    "I’m going through a divorce",
     "My child is turning 26",
-    "Am I ready for Medicare?",
-    "I'm thinking about retiring",
-    "I just started here",
-    "I lost other coverage",
+    "I’m approaching 65 / thinking about Medicare",
+    "I’m thinking about retiring",
+    "I just started at the company",
+    "I lost other coverage (for example, a spouse’s plan)",
     "Someone in my family died"
   ]
 }

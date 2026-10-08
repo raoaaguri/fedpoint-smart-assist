@@ -16,4 +16,4 @@ export const MOCK_FILES = {
 };
 
 // Q&A files the mock checks before falling back to keyword matching
-export const MOCK_QA = ['dental', 'vision'];
+export const MOCK_QA = ['life-events', 'dental', 'vision'];
