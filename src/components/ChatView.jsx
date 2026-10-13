@@ -43,7 +43,17 @@ function Feedback() {
   );
 }
 
-function AssistantMessage({ message, documents, busy, fresh, onAsk }) {
+/** Follow-up chips plus "Others", which opens the Ask a question box. */
+function FollowUps({ questions = [], busy, onAsk, onOthers }) {
+  return (
+    <div className="mt-2.5 flex flex-wrap gap-2">
+      {questions.map((q) => <ChipButton key={q} disabled={busy} onClick={() => onAsk(q)}>{q}</ChipButton>)}
+      <ChipButton disabled={busy} onClick={onOthers}>Others</ChipButton>
+    </div>
+  );
+}
+
+function AssistantMessage({ message, documents, busy, fresh, onAsk, onOthers }) {
   const { answer, householdLabel, tier } = message;
   return (
     <AssistantRow fresh={fresh}>
@@ -63,11 +73,7 @@ function AssistantMessage({ message, documents, busy, fresh, onAsk }) {
           </div>
         )}
         <Feedback />
-        {answer.followUps?.length > 0 && (
-          <div className="mt-2.5 flex flex-wrap gap-2">
-            {answer.followUps.map((q) => <ChipButton key={q} disabled={busy} onClick={() => onAsk(q)}>{q}</ChipButton>)}
-          </div>
-        )}
+        <FollowUps questions={answer.followUps} busy={busy} onAsk={onAsk} onOthers={onOthers} />
       </div>
     </AssistantRow>
   );
@@ -134,6 +140,11 @@ export default function ChatView({ session, busy, documents, showTools, composer
   const [openedAt] = useState(() => Date.now());
   const [showToBottom, setShowToBottom] = useState(false);
   const messages = session?.messages ?? [];
+  // The Ask a question box stays hidden until "Others" is clicked, and hides
+  // again once the next question is asked.
+  const [othersAt, setOthersAt] = useState(null);
+  const asking = othersAt === messages.length;
+  const showAsk = () => setOthersAt(messages.length);
 
   // Start at the newest message when the session opens
   useLayoutEffect(() => {
@@ -225,10 +236,11 @@ export default function ChatView({ session, busy, documents, showTools, composer
                     <Icon name="info" className="mt-0.5 text-blue-vivid" />
                     <span>{m.text}</span>
                   </div>
+                  <FollowUps busy={busy} onAsk={onAsk} onOthers={showAsk} />
                 </AssistantRow>
               );
             }
-            return <AssistantMessage key={m.id} message={m} documents={documents} busy={busy} fresh={fresh} onAsk={onAsk} />;
+            return <AssistantMessage key={m.id} message={m} documents={documents} busy={busy} fresh={fresh} onAsk={onAsk} onOthers={showAsk} />;
           })}
           {busy && <Thinking />}
         </div>
@@ -245,7 +257,7 @@ export default function ChatView({ session, busy, documents, showTools, composer
           <Icon name="arrowDown" />
         </button>
         <div className="relative z-[2] mx-auto max-w-[788px]">
-          {composer}
+          {asking && composer}
           <p className="mt-[9px] flex items-center justify-center gap-1.5 text-center text-[11.5px] leading-[1.45] text-ink-500 phone:mt-[7px] phone:text-[11px]">
             <Icon name="info" size={12} className="phone:hidden" />
             <span>
